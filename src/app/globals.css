@@ -26,6 +26,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.app-container {
+  min-height: 100vh; /* This will make the div take up the full height of the screen */
+  display: flex; /* This will make the div a flex container */
+  justify-content: center; /* This will center the children horizontally */
+  align-items: center; /* This will center the children vertically */
+  background: url("/assets/background.png");
+}
+
+.carousel-container {
+  width: 50%; /* Adjust this to make the carousel smaller or larger */
+  margin: 0 auto; /* This will center the carousel */
+}
+
+.carousel-image {
+  width: 1500px; /* Adjust this to your desired width */
+  height: 550px; /* Adjust this to your desired height */
+  object-fit: contain; /* This will make the image cover the entire width and height without distorting the image */
+  margin: 0 auto; /* This will center the image */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

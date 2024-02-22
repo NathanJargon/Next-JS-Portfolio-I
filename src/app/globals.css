@@ -25,6 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+<<<<<<< HEAD
 
 .app-container {
   min-height: 100vh; /* This will make the div take up the full height of the screen */
@@ -51,3 +52,5 @@ body {
     text-wrap: balance;
   }
 }
+=======
+>>>>>>> 482d2dba8520d0692c2275a5ef6b384ed4279939

@@ -8,10 +8,35 @@ font-family: 'HKGrotesk';
 src: url('/HK-Grotesk-Bold.otf') format('opentype');
 }
 
+.arrow-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    display: none; 
+  }
+  
+  .box:hover .arrow-image {
+    display: inline;
+  }
+  
+  .arrow-image-white {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .box:hover .arrow-image-white {
+    display: none; 
+  }
+
 .page {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-image: url('/background1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .header {
@@ -24,6 +49,7 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
   .name-text {
     font-family: 'NeueMachina';
     font-size: 1em;
+    cursor: default;
   }
   
   .logo {
@@ -44,7 +70,6 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
   
   .sub-header {
     flex: 1;
-    background-color: black;
     display: flex;
     flex-direction: row;
     padding: 20px;
@@ -53,8 +78,10 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
   }
   
   .header-text {
+    color: white;
     font-family: 'HKGrotesk';
     font-size: 4em;
+    cursor: default;
   }
   
   .boxes {
@@ -68,7 +95,25 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     width: 28%;
     height: 40%;
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .box:hover {
+    transform: translateY(-10px);
     background-color: white;
+  }
+  
+  .box h2 {
+    color: white;
+  }
+  
+  .box:hover h2 {
+    color: black;
   }
 
   @media (min-width: 1068px) and (max-width: 1358px) {
@@ -76,18 +121,20 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     .sub-header {
         padding-left: 50px;
         padding-bottom: 0px;
-        width: 70%;
+        width: 50%;
       }
 
     .boxes {
-    margin-bottom: 50px;
-    flex-direction: column;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .box {
-        width: 85%;
+        width: 35%;
         height: 100px;
-        margin: 10px 0px 30px 0px;
+        margin: 10px 20px 30px 20px;
     }
 
     }
@@ -98,7 +145,7 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     }
   
     .header-text {
-      font-size: 4em;
+      font-size: 3em;
     }
   
     .sub-header {
@@ -112,19 +159,21 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     }
 
     .logo {
-      width: 50%;
-      height: 50%;
+      width: 40%;
+      height: 40%;
     }
   
     .boxes {
-      margin-bottom: 50px;
-      flex-direction: column;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  
+
     .box {
-      width: 85%;
-      height: 100px;
-      margin: 10px 0px 30px 0px;
+        width: 35%;
+        height: 80px;
+        margin: 10px 20px 30px 20px;
     }
   }
 
@@ -134,13 +183,13 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     }
   
     .header-text {
-      font-size: 4em;
+      font-size: 3em;
     }
   
     .sub-header {
       padding-left: 50px;
       padding-bottom: 0px;
-      width: 80%;
+      width: 100%;
     }
 
     .name-text {
@@ -148,19 +197,18 @@ src: url('/HK-Grotesk-Bold.otf') format('opentype');
     }
 
     .logo {
-      width: 50%;
-      height: 50%;
+      width: 40%;
+      height: 40%;
     }
   
     .boxes {
-      margin-bottom: 50px;
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+    
     .box {
-      width: 85%;
-      height: 100px;
-      margin: 10px 0px 30px 0px;
+        width: 85%;
+        height: 50px;
+        margin: 10px 0px 10px 0px;
     }
   }
 
